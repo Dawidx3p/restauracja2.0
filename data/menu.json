@@ -1,0 +1,799 @@
+{
+  "restaurant": {
+    "concept": "Nowoczesne miejskie bistro",
+    "currency": "PLN",
+    "locale": "pl-PL",
+    "media": {
+      "hero": "images/restaurant/hero-interior.webp",
+      "about": "images/restaurant/about-kitchen.webp"
+    }
+  },
+  "filters": [
+    {
+      "id": "konkretnie",
+      "label": "Coś konkretnego"
+    },
+    {
+      "id": "lekko",
+      "label": "Lekko"
+    },
+    {
+      "id": "szybko",
+      "label": "Na szybko"
+    },
+    {
+      "id": "slodko",
+      "label": "Na słodko"
+    },
+    {
+      "id": "do-40",
+      "label": "Do 40 zł"
+    },
+    {
+      "id": "dla-dwojga",
+      "label": "Dla dwóch osób"
+    },
+    {
+      "id": "zaskocz",
+      "label": "Zaskocz mnie"
+    }
+  ],
+  "categories": [
+    {
+      "id": "pizza",
+      "name": "Pizza",
+      "emoji": "🍕",
+      "image": null
+    },
+    {
+      "id": "makarony",
+      "name": "Makarony",
+      "emoji": "🍝",
+      "image": null
+    },
+    {
+      "id": "miesa-ryby",
+      "name": "Mięsa i ryby",
+      "emoji": "🥩",
+      "image": null
+    },
+    {
+      "id": "lekkie",
+      "name": "Lekkie",
+      "emoji": "🥗",
+      "image": null
+    },
+    {
+      "id": "desery",
+      "name": "Desery",
+      "emoji": "🍰",
+      "image": null
+    },
+    {
+      "id": "napoje",
+      "name": "Napoje",
+      "emoji": "🥤",
+      "image": null
+    }
+  ],
+  "items": [
+    {
+      "id": "pizza-margherita",
+      "category": "pizza",
+      "name": "Margherita",
+      "description": "Pomidory San Marzano, mozzarella fior di latte, bazylia, oliwa extra vergine.",
+      "price": 32,
+      "weight": "około 430 g",
+      "badges": [],
+      "moods": [
+        "szybko",
+        "do-40",
+        "dla-dwojga"
+      ],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "mleko"
+      ],
+      "prepMinutes": 15,
+      "image": null
+    },
+    {
+      "id": "pizza-diavola",
+      "category": "pizza",
+      "name": "Diavola",
+      "description": "Pikantne salami, mozzarella, pomidory, chili, miód chili.",
+      "price": 41,
+      "weight": "około 470 g",
+      "badges": [
+        "ostre"
+      ],
+      "moods": [
+        "konkretnie",
+        "szybko",
+        "dla-dwojga"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "mleko"
+      ],
+      "prepMinutes": 15,
+      "image": null
+    },
+    {
+      "id": "pizza-prosciutto",
+      "category": "pizza",
+      "name": "Prosciutto & Rucola",
+      "description": "Prosciutto crudo, rukola, grana padano, mozzarella i pomidorki.",
+      "price": 44,
+      "weight": "około 480 g",
+      "badges": [],
+      "moods": [
+        "szybko",
+        "dla-dwojga"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "mleko"
+      ],
+      "prepMinutes": 15,
+      "image": null
+    },
+    {
+      "id": "pizza-burrata",
+      "category": "pizza",
+      "name": "Burrata & Pistacchio",
+      "description": "Mortadela, burrata, pesto pistacjowe, mozzarella i bazylia.",
+      "price": 47,
+      "weight": "około 510 g",
+      "badges": [
+        "bestseller"
+      ],
+      "moods": [
+        "konkretnie",
+        "dla-dwojga",
+        "zaskocz"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "mleko",
+        "orzechy"
+      ],
+      "prepMinutes": 17,
+      "recommendation": 94,
+      "image": "images/dishes/pizza-burrata.webp"
+    },
+    {
+      "id": "pizza-bosco",
+      "category": "pizza",
+      "name": "Bosco",
+      "description": "Grzyby leśne, pieczarki, mozzarella, tymianek, krem truflowy.",
+      "price": 42,
+      "weight": "około 460 g",
+      "badges": [],
+      "moods": [
+        "dla-dwojga"
+      ],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "mleko"
+      ],
+      "prepMinutes": 16,
+      "image": null
+    },
+    {
+      "id": "pizza-verde",
+      "category": "pizza",
+      "name": "Verde",
+      "description": "Cukinia, szpinak, karczochy, oliwki, pomidory i pesto bazyliowe.",
+      "price": 39,
+      "weight": "około 450 g",
+      "badges": [],
+      "moods": [
+        "lekko",
+        "do-40",
+        "dla-dwojga"
+      ],
+      "diet": [
+        "wegańskie"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "prepMinutes": 16,
+      "image": null
+    },
+    {
+      "id": "pasta-carbonara",
+      "category": "makarony",
+      "name": "Carbonara Classica",
+      "description": "Spaghetti, guanciale, żółtko, pecorino romano i świeżo mielony pieprz.",
+      "price": 39,
+      "weight": "380 g",
+      "badges": [
+        "bestseller"
+      ],
+      "moods": [
+        "konkretnie",
+        "szybko",
+        "do-40",
+        "zaskocz"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko"
+      ],
+      "prepMinutes": 15,
+      "recommendation": 96,
+      "image": "images/dishes/carbonara.webp"
+    },
+    {
+      "id": "pasta-ragu",
+      "category": "makarony",
+      "name": "Tagliatelle al Ragù",
+      "description": "Wolno gotowana wołowina, pomidory, warzywa korzeniowe i parmezan.",
+      "price": 45,
+      "weight": "420 g",
+      "badges": [],
+      "moods": [
+        "konkretnie"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko",
+        "seler"
+      ],
+      "prepMinutes": 18,
+      "image": null
+    },
+    {
+      "id": "pasta-funghi",
+      "category": "makarony",
+      "name": "Pappardelle Funghi",
+      "description": "Grzyby leśne, śmietanka, czosnek, pietruszka i grana padano.",
+      "price": 43,
+      "weight": "390 g",
+      "badges": [],
+      "moods": [],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko"
+      ],
+      "prepMinutes": 17,
+      "image": null
+    },
+    {
+      "id": "pasta-gamberi",
+      "category": "makarony",
+      "name": "Linguine Gamberi",
+      "description": "Krewetki, pomidorki, czosnek, chili, białe wino i pietruszka.",
+      "price": 52,
+      "weight": "400 g",
+      "badges": [
+        "nowość"
+      ],
+      "moods": [
+        "zaskocz"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "skorupiaki",
+        "siarczyny"
+      ],
+      "prepMinutes": 18,
+      "image": null
+    },
+    {
+      "id": "pasta-arrabbiata",
+      "category": "makarony",
+      "name": "Penne Arrabbiata",
+      "description": "Pomidory, czosnek, chili, oliwa i świeża bazylia.",
+      "price": 34,
+      "weight": "370 g",
+      "badges": [
+        "ostre"
+      ],
+      "moods": [
+        "szybko",
+        "do-40"
+      ],
+      "diet": [
+        "wegańskie"
+      ],
+      "allergens": [
+        "gluten"
+      ],
+      "prepMinutes": 14,
+      "image": null
+    },
+    {
+      "id": "mieso-burger",
+      "category": "miesa-ryby",
+      "name": "Burger Firmowy",
+      "description": "Wołowina, cheddar, konfitowana cebula, pikle, sałata, sos firmowy i frytki.",
+      "price": 46,
+      "weight": "520 g",
+      "badges": [
+        "bestseller"
+      ],
+      "moods": [
+        "konkretnie",
+        "zaskocz"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko",
+        "gorczyca"
+      ],
+      "prepMinutes": 18,
+      "recommendation": 93,
+      "image": "images/dishes/burger-firmowy.webp"
+    },
+    {
+      "id": "mieso-stek",
+      "category": "miesa-ryby",
+      "name": "Stek z antrykotu",
+      "description": "Antrykot wołowy 250 g, frytki, sałata z winegretem i masło ziołowe.",
+      "price": 89,
+      "weight": "około 500 g",
+      "badges": [
+        "bestseller"
+      ],
+      "moods": [
+        "konkretnie",
+        "zaskocz"
+      ],
+      "diet": [
+        "bez glutenu"
+      ],
+      "allergens": [
+        "mleko",
+        "gorczyca"
+      ],
+      "prepMinutes": 25,
+      "recommendation": 92,
+      "image": "images/dishes/stek-antrykot.webp"
+    },
+    {
+      "id": "mieso-kurczak",
+      "category": "miesa-ryby",
+      "name": "Kurczak supreme",
+      "description": "Pierś kurczaka, kremowe purée, fasolka szparagowa i sos pieczeniowy.",
+      "price": 49,
+      "weight": "440 g",
+      "badges": [],
+      "moods": [
+        "konkretnie"
+      ],
+      "diet": [
+        "bez glutenu"
+      ],
+      "allergens": [
+        "mleko",
+        "seler"
+      ],
+      "prepMinutes": 22,
+      "image": null
+    },
+    {
+      "id": "ryba-losos",
+      "category": "miesa-ryby",
+      "name": "Łosoś teriyaki",
+      "description": "Łosoś, ryż jaśminowy, brokuł, sezam i sos teriyaki.",
+      "price": 57,
+      "weight": "430 g",
+      "badges": [],
+      "moods": [
+        "lekko"
+      ],
+      "diet": [],
+      "allergens": [
+        "ryby",
+        "soja",
+        "sezam",
+        "gluten"
+      ],
+      "prepMinutes": 20,
+      "image": null
+    },
+    {
+      "id": "mieso-zeberka",
+      "category": "miesa-ryby",
+      "name": "Żeberka BBQ",
+      "description": "Wolno pieczone żeberka, glazura BBQ, coleslaw i pieczone ziemniaki.",
+      "price": 59,
+      "weight": "650 g",
+      "badges": [
+        "dla głodnych"
+      ],
+      "moods": [
+        "konkretnie"
+      ],
+      "diet": [],
+      "allergens": [
+        "jaja",
+        "gorczyca"
+      ],
+      "prepMinutes": 23,
+      "image": null
+    },
+    {
+      "id": "lekkie-bowl",
+      "category": "lekkie",
+      "name": "Bowl Zielony",
+      "description": "Komosa ryżowa, awokado, edamame, ogórek, brokuł, sezam i dressing limonkowy.",
+      "price": 38,
+      "weight": "420 g",
+      "badges": [],
+      "moods": [
+        "lekko",
+        "do-40"
+      ],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [
+        "soja",
+        "sezam"
+      ],
+      "prepMinutes": 14,
+      "image": null
+    },
+    {
+      "id": "lekkie-cezar",
+      "category": "lekkie",
+      "name": "Sałatka Cezar",
+      "description": "Kurczak, sałata rzymska, grana padano, grzanki i sos cezar.",
+      "price": 39,
+      "weight": "390 g",
+      "badges": [],
+      "moods": [
+        "lekko",
+        "szybko",
+        "do-40"
+      ],
+      "diet": [],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko",
+        "ryby",
+        "gorczyca"
+      ],
+      "prepMinutes": 15,
+      "image": null
+    },
+    {
+      "id": "lekkie-burrata",
+      "category": "lekkie",
+      "name": "Burrata z pomidorami",
+      "description": "Burrata, kolorowe pomidory, pesto bazyliowe, oliwa i focaccia.",
+      "price": 41,
+      "weight": "350 g",
+      "badges": [],
+      "moods": [
+        "lekko",
+        "dla-dwojga"
+      ],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "mleko",
+        "orzechy"
+      ],
+      "prepMinutes": 12,
+      "image": null
+    },
+    {
+      "id": "lekkie-tatar",
+      "category": "lekkie",
+      "name": "Tatar z łososia",
+      "description": "Łosoś, awokado, ogórek, ponzu, sezam i chips ryżowy.",
+      "price": 47,
+      "weight": "230 g",
+      "badges": [],
+      "moods": [
+        "lekko",
+        "dla-dwojga"
+      ],
+      "diet": [],
+      "allergens": [
+        "ryby",
+        "soja",
+        "sezam",
+        "gluten"
+      ],
+      "prepMinutes": 13,
+      "image": null
+    },
+    {
+      "id": "lekkie-krem",
+      "category": "lekkie",
+      "name": "Krem pomidorowy",
+      "description": "Pieczone pomidory, bazylia, oliwa i grzanka czosnkowa.",
+      "price": 25,
+      "weight": "350 ml",
+      "badges": [],
+      "moods": [
+        "lekko",
+        "szybko",
+        "do-40"
+      ],
+      "diet": [
+        "wegańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "seler"
+      ],
+      "prepMinutes": 10,
+      "image": null
+    },
+    {
+      "id": "deser-sernik",
+      "category": "desery",
+      "name": "Sernik baskijski",
+      "description": "Kremowy sernik z ciemno wypieczonym wierzchem i sosem malinowym.",
+      "price": 27,
+      "weight": "160 g",
+      "badges": [
+        "bestseller"
+      ],
+      "moods": [
+        "slodko",
+        "do-40",
+        "zaskocz"
+      ],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "jaja",
+        "mleko"
+      ],
+      "prepMinutes": 5,
+      "recommendation": 95,
+      "image": "images/dishes/sernik-baskijski.webp"
+    },
+    {
+      "id": "deser-tiramisu",
+      "category": "desery",
+      "name": "Tiramisu",
+      "description": "Mascarpone, espresso, biszkopty savoiardi i kakao.",
+      "price": 26,
+      "weight": "170 g",
+      "badges": [],
+      "moods": [
+        "slodko",
+        "do-40"
+      ],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko"
+      ],
+      "prepMinutes": 5,
+      "image": null
+    },
+    {
+      "id": "deser-fondant",
+      "category": "desery",
+      "name": "Fondant czekoladowy",
+      "description": "Płynne czekoladowe wnętrze, lody waniliowe i wiśnie.",
+      "price": 29,
+      "weight": "210 g",
+      "badges": [
+        "na ciepło"
+      ],
+      "moods": [
+        "slodko",
+        "do-40",
+        "dla-dwojga"
+      ],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "gluten",
+        "jaja",
+        "mleko"
+      ],
+      "prepMinutes": 14,
+      "image": null
+    },
+    {
+      "id": "deser-panna-cotta",
+      "category": "desery",
+      "name": "Panna cotta mango",
+      "description": "Waniliowa panna cotta, mango, marakuja i limonka.",
+      "price": 25,
+      "weight": "180 g",
+      "badges": [
+        "nowość"
+      ],
+      "moods": [
+        "slodko",
+        "lekko",
+        "do-40",
+        "zaskocz"
+      ],
+      "diet": [
+        "wegetariańskie",
+        "bez glutenu"
+      ],
+      "allergens": [
+        "mleko"
+      ],
+      "prepMinutes": 5,
+      "image": null
+    },
+    {
+      "id": "deser-sorbet",
+      "category": "desery",
+      "name": "Sorbet sezonowy",
+      "description": "Dwie gałki sorbetu przygotowanego z sezonowych owoców.",
+      "price": 19,
+      "weight": "140 g",
+      "badges": [],
+      "moods": [
+        "slodko",
+        "lekko",
+        "do-40"
+      ],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [],
+      "prepMinutes": 4,
+      "image": null
+    },
+    {
+      "id": "napoj-lemoniada-cytrus",
+      "category": "napoje",
+      "name": "Lemoniada cytrusowa",
+      "description": "Cytryna, pomarańcza i mięta.",
+      "price": 16,
+      "weight": "400 ml",
+      "badges": [],
+      "moods": [],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [],
+      "prepMinutes": 4,
+      "image": null
+    },
+    {
+      "id": "napoj-lemoniada-malina",
+      "category": "napoje",
+      "name": "Lemoniada malina–hibiskus",
+      "description": "Malina, hibiskus i limonka.",
+      "price": 17,
+      "weight": "400 ml",
+      "badges": [
+        "bestseller"
+      ],
+      "moods": [],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [],
+      "prepMinutes": 4,
+      "image": null
+    },
+    {
+      "id": "napoj-espresso",
+      "category": "napoje",
+      "name": "Espresso",
+      "description": "Podwójne espresso z mieszanki arabiki.",
+      "price": 10,
+      "weight": "40 ml",
+      "badges": [],
+      "moods": [],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [],
+      "prepMinutes": 3,
+      "image": null
+    },
+    {
+      "id": "napoj-flat-white",
+      "category": "napoje",
+      "name": "Flat white",
+      "description": "Podwójne espresso i aksamitnie spienione mleko.",
+      "price": 17,
+      "weight": "180 ml",
+      "badges": [],
+      "moods": [],
+      "diet": [
+        "wegetariańskie"
+      ],
+      "allergens": [
+        "mleko"
+      ],
+      "prepMinutes": 4,
+      "image": null
+    },
+    {
+      "id": "napoj-herbata",
+      "category": "napoje",
+      "name": "Herbata liściasta",
+      "description": "Earl Grey, zielona jaśminowa albo owoce leśne.",
+      "price": 14,
+      "weight": "400 ml",
+      "badges": [],
+      "moods": [],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [],
+      "prepMinutes": 5,
+      "image": null
+    },
+    {
+      "id": "napoj-woda",
+      "category": "napoje",
+      "name": "Woda filtrowana",
+      "description": "Gazowana albo niegazowana.",
+      "price": 8,
+      "weight": "700 ml",
+      "badges": [],
+      "moods": [],
+      "diet": [
+        "wegańskie",
+        "bez glutenu"
+      ],
+      "allergens": [],
+      "prepMinutes": 2,
+      "image": null
+    }
+  ],
+  "sets": [
+    {
+      "id": "wieczor-we-dwoje",
+      "name": "Wieczór we dwoje",
+      "description": "Dwie pizze do wyboru, burrata z pomidorami na start oraz dwa kieliszki wina domu albo dwie lemoniady.",
+      "price": 129,
+      "badges": [
+        "dla dwojga"
+      ],
+      "moods": [
+        "dla-dwojga",
+        "zaskocz"
+      ],
+      "diet": [],
+      "image": null
+    }
+  ]
+}

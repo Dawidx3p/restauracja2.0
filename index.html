@@ -1,0 +1,398 @@
+<!doctype html>
+<html lang="pl">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, viewport-fit=cover">
+    <meta name="theme-color" content="#171712">
+    <meta name="description" content="Nowoczesne miejskie bistro. Odkrywaj menu obrazem, nastrojem i apetytem.">
+    <title>AMO — miejskie bistro</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,600;1,500&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css?v=21">
+    <script src="app.js?v=21" defer></script>
+  </head>
+  <body>
+    <header class="topbar" data-topbar>
+      <a class="wordmark" href="#start" aria-label="AMO — strona główna">AMO<span>.</span></a>
+      <nav class="desktop-nav" aria-label="Nawigacja główna">
+        <a href="#bestsellery">Bestsellery</a>
+        <a href="#menu">Menu</a>
+        <a href="#o-nas">O nas</a>
+      </nav>
+      <button class="top-cart" type="button" data-open-cart aria-label="Otwórz koszyk">
+        Koszyk <span data-cart-count>0</span>
+      </button>
+    </header>
+
+    <main>
+      <section class="hero" id="start" aria-labelledby="hero-title">
+        <img src="images/restaurant/hero-interior.webp" alt="Ciepłe wnętrze restauracji AMO z otwartą kuchnią" width="1672" height="941">
+        <div class="hero-shade"></div>
+        <div class="hero-content">
+          <p class="eyebrow light">Miejskie bistro · codziennie od 12:00</p>
+          <h1 id="hero-title">Masz ochotę.<br><em>My mamy na to danie.</em></h1>
+          <p class="hero-lead">Świeży makaron, pizza z pieca i kilka rzeczy, dla których warto zostać dłużej.</p>
+          <div class="hero-actions">
+            <a class="button button-primary" href="#mood">Wybierz coś dla siebie</a>
+            <button class="button button-ghost" type="button" data-reserve>Rezerwuj stolik</button>
+          </div>
+        </div>
+        <a class="scroll-cue" href="#mood" aria-label="Przejdź niżej">Przewiń <span>↓</span></a>
+      </section>
+
+      <section class="mood-section section" id="mood" aria-labelledby="mood-title">
+        <div class="section-heading mood-heading">
+          <div>
+            <p class="eyebrow">Szybki wybór</p>
+            <h2 id="mood-title">Na co masz dziś ochotę?</h2>
+          </div>
+          <p>Nie musisz czytać całego menu. Powiedz nam, czego szukasz, a pokażemy kilka trafnych propozycji.</p>
+        </div>
+        <div class="mood-list" data-mood-list aria-label="Filtry menu"></div>
+        <div class="recommendation" data-recommendation hidden>
+          <div class="recommendation-copy">
+            <p class="eyebrow">Wybrane dla Ciebie</p>
+            <h3 data-recommendation-title></h3>
+            <p data-recommendation-description></p>
+            <button class="text-button" type="button" data-show-results>Zobacz wszystkie propozycje <span>→</span></button>
+          </div>
+          <div class="recommendation-cards" data-recommendation-cards></div>
+        </div>
+      </section>
+
+      <section class="bestsellers section section-dark" id="bestsellery" aria-labelledby="bestsellers-title">
+        <div class="section-heading horizontal">
+          <div>
+            <p class="eyebrow light">Najczęściej wybierane</p>
+            <h2 id="bestsellers-title">To znika ze stołów <em>najszybciej.</em></h2>
+          </div>
+          <p>Pięć dań, do których nasi goście wracają najczęściej.</p>
+        </div>
+        <div class="bestseller-track" data-bestsellers></div>
+      </section>
+
+      <section class="menu-section section" id="menu" aria-labelledby="menu-title">
+        <div class="mobile-menu-header">
+          <div><span class="mobile-menu-logo">AMO<span>.</span></span><strong>Menu</strong></div>
+          <button type="button" data-close-mobile-menu aria-label="Zamknij menu">×</button>
+        </div>
+        <div class="section-heading horizontal">
+          <div>
+            <p class="eyebrow">Odkrywaj po swojemu</p>
+            <h2 id="menu-title">Na co masz <em>apetyt?</em></h2>
+          </div>
+          <p>Zacznij od kategorii albo przejdź od razu do konkretnego dania.</p>
+        </div>
+
+        <div class="category-grid" data-categories></div>
+
+        <div class="menu-browser" data-menu-browser>
+          <div class="menu-toolbar">
+            <div>
+              <p class="eyebrow">Nasze menu</p>
+              <h3 data-menu-heading>Wszystkie dania</h3>
+            </div>
+            <label class="search-box">
+              <span aria-hidden="true">⌕</span>
+              <span class="sr-only">Szukaj w menu</span>
+              <input type="search" placeholder="Szukaj dania lub składnika" data-search>
+            </label>
+          </div>
+          <div class="category-tabs" data-category-tabs aria-label="Kategorie menu"></div>
+          <div class="dish-list" data-dish-list aria-live="polite"></div>
+          <p class="empty-state" data-empty hidden>Nie znaleźliśmy takiego dania. Spróbuj innej nazwy lub kategorii.</p>
+        </div>
+      </section>
+
+      <section class="today-section" aria-labelledby="today-title">
+        <div class="today-image">
+          <img src="images/dishes/pizza-burrata.webp" alt="Pizza Burrata & Pistacchio" loading="lazy" width="1122" height="1402">
+        </div>
+        <div class="today-copy">
+          <p class="eyebrow light">Dzisiaj polecamy</p>
+          <h2 id="today-title">Burrata.<br>Pistacje.<br><em>Miłość od pierwszego kęsa.</em></h2>
+          <p>Nasza najbardziej kremowa pizza: mortadela, burrata, pesto pistacjowe i puszyste ciasto z mocno wypieczonym rantem.</p>
+          <div class="today-meta"><strong>47 zł</strong><span>około 17 min</span></div>
+          <button class="button button-light" type="button" data-open-dish="pizza-burrata">Zobacz danie</button>
+        </div>
+      </section>
+
+      <section class="about section" id="o-nas" aria-labelledby="about-title">
+        <div class="about-copy">
+          <p class="eyebrow">Bez skrótów</p>
+          <h2 id="about-title">Robimy prosto.<br><em>Robimy dobrze.</em></h2>
+          <p>W AMO nie komplikujemy jedzenia. Codziennie przygotowujemy świeży makaron, wypiekamy pizzę w wysokiej temperaturze i wybieramy składniki, które nie potrzebują długiej opowieści.</p>
+          <dl class="about-facts">
+            <div><dt>12:00–23:00</dt><dd>codziennie</dd></div>
+            <div><dt>15 min</dt><dd>najszybsze dania</dd></div>
+            <div><dt>32</dt><dd>krótkie, konkretne pozycje</dd></div>
+          </dl>
+        </div>
+        <div class="about-image">
+          <img src="images/restaurant/about-kitchen.webp" alt="Kucharz przygotowujący świeży makaron" loading="lazy" width="1122" height="1402">
+        </div>
+      </section>
+
+      <section class="visit section" id="lokal" aria-labelledby="visit-title">
+        <p class="eyebrow light">Spotkajmy się</p>
+        <h2 id="visit-title">Stół już prawie <em>czeka.</em></h2>
+        <p>ul. Dobra 24, Warszawa · codziennie 12:00–23:00</p>
+        <button class="button button-primary" type="button" data-reserve>Rezerwuj stolik</button>
+      </section>
+    </main>
+
+    <footer>
+      <a class="wordmark light-mark" href="#start">AMO<span>.</span></a>
+      <p>Jedzenie, do którego chce się wracać.</p>
+      <p class="footer-note">Projekt demonstracyjny · dane lokalu są przykładowe</p>
+    </footer>
+
+    <nav class="mobile-nav" aria-label="Dolna nawigacja">
+      <a href="#start" class="active"><span class="nav-logo">AMO<span>.</span></span>Start</a>
+      <button type="button" data-open-mobile-menu><span>☰</span>Menu</button>
+      <button type="button" data-focus-search><span>⌕</span>Szukaj</button>
+      <button type="button" data-open-cart><span class="cart-symbol">◫<b data-cart-count>0</b></span>Koszyk</button>
+      <a href="#lokal"><span>⌖</span>Lokal</a>
+    </nav>
+
+    <dialog class="dish-modal" data-dish-modal aria-labelledby="dish-modal-title">
+      <div class="modal-shell">
+        <button class="modal-close" type="button" data-close-dish aria-label="Zamknij">×</button>
+        <div class="modal-media" data-modal-media></div>
+        <div class="modal-content">
+          <div class="modal-badges" data-modal-badges></div>
+          <div class="modal-title-row">
+            <h2 id="dish-modal-title" data-modal-title></h2>
+            <strong data-modal-price></strong>
+          </div>
+          <p class="modal-description" data-modal-description></p>
+          <dl class="dish-details" data-dish-details>
+            <div><dt>Porcja</dt><dd data-modal-weight></dd></div>
+            <div><dt>Czas</dt><dd data-modal-time></dd></div>
+            <div data-recommendation-row><dt>Goście polecają</dt><dd data-modal-recommendation></dd></div>
+          </dl>
+          <div class="allergens" data-allergens><span>Alergeny</span><p data-modal-allergens></p></div>
+          <div class="quantity-control" data-quantity-control aria-label="Liczba porcji">
+            <button type="button" data-qty-minus aria-label="Zmniejsz liczbę">−</button>
+            <strong data-qty>1</strong>
+            <button type="button" data-qty-plus aria-label="Zwiększ liczbę">+</button>
+          </div>
+          <button class="add-button" type="button" data-add-to-cart><span>Dodaj do zamówienia</span><strong data-add-price></strong></button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="set-config-modal" data-set-config-modal aria-labelledby="set-config-title">
+      <div class="set-config-shell">
+        <button class="modal-close" type="button" data-close-set-config aria-label="Zamknij konfigurator">×</button>
+        <header class="set-config-header">
+          <p class="eyebrow">Zestaw dla dwojga</p>
+          <h2 id="set-config-title">Wybierz swój wieczór.</h2>
+          <p>Burrata jest już w zestawie. Dobierz dwie pizze i napoje — całość kosztuje 129 zł.</p>
+        </header>
+        <div class="set-configurator">
+          <div class="set-included"><span aria-hidden="true">✓</span><p><strong>Na start: burrata z pomidorami</strong><small>Ten element jest już w zestawie.</small></p></div>
+          <fieldset>
+            <legend>1. Wybierz pierwszą pizzę</legend>
+            <div class="set-options" data-set-pizza-one></div>
+          </fieldset>
+          <fieldset>
+            <legend>2. Wybierz drugą pizzę</legend>
+            <div class="set-options" data-set-pizza-two></div>
+          </fieldset>
+          <fieldset>
+            <legend>3. Wybierz napoje</legend>
+            <div class="set-options drinks" data-set-drinks></div>
+          </fieldset>
+        </div>
+        <button class="add-button" type="button" data-add-set-to-cart disabled><span>Wybierz skład zestawu</span><strong>129 zł</strong></button>
+      </div>
+    </dialog>
+
+    <dialog class="reservation-modal" data-reservation-modal aria-labelledby="reservation-title">
+      <div class="reservation-shell">
+        <button class="modal-close" type="button" data-close-reservation aria-label="Zamknij rezerwację">×</button>
+
+        <div class="reservation-form-view" data-reservation-form-view>
+          <div class="reservation-intro">
+            <p class="eyebrow">Rezerwacja stolika</p>
+            <h2 id="reservation-title">Kiedy się widzimy?</h2>
+            <p>Wybierz termin i zostaw numer. Potwierdzimy dostępność stolika telefonicznie.</p>
+          </div>
+
+          <form data-reservation-form>
+            <fieldset class="reservation-fieldset">
+              <legend>Ile osób?</legend>
+              <div class="guest-options" data-reservation-guests></div>
+            </fieldset>
+
+            <fieldset class="reservation-fieldset">
+              <legend>Wybierz dzień</legend>
+              <div class="date-options" data-reservation-dates></div>
+            </fieldset>
+
+            <fieldset class="reservation-fieldset">
+              <legend>Wybierz godzinę</legend>
+              <div class="time-options" data-reservation-times></div>
+            </fieldset>
+
+            <div class="reservation-contact">
+              <label>
+                <span>Imię</span>
+                <input type="text" name="name" autocomplete="given-name" placeholder="Jak mamy się zwracać?" required maxlength="40">
+              </label>
+              <label>
+                <span>Telefon</span>
+                <div class="phone-input">
+                  <span aria-hidden="true">+48</span>
+                  <input type="tel" name="phone" autocomplete="tel-national" inputmode="numeric" placeholder="500 000 000" required pattern="[0-9]{3} [0-9]{3} [0-9]{3}" maxlength="11" title="Wpisz 9-cyfrowy polski numer telefonu" data-polish-phone>
+                </div>
+              </label>
+            </div>
+
+            <label class="reservation-consent">
+              <input type="checkbox" name="contactConsent" required>
+              <span>Zgadzam się na kontakt w sprawie tej rezerwacji.</span>
+            </label>
+
+            <button class="reservation-submit" type="submit">
+              <span>Wyślij prośbę</span>
+              <small data-reservation-summary></small>
+            </button>
+            <p class="reservation-demo-note">To prototyp — dane nie są nigdzie wysyłane.</p>
+          </form>
+        </div>
+
+        <div class="reservation-success" data-reservation-success hidden>
+          <span class="success-mark" aria-hidden="true">✓</span>
+          <p class="eyebrow">Prośba gotowa</p>
+          <h2>Dziękujemy, <span data-reservation-name></span>.</h2>
+          <p data-reservation-confirmation></p>
+          <p class="reservation-demo-success">W gotowej stronie restauracja otrzymałaby teraz zgłoszenie i potwierdziła je telefonicznie.</p>
+          <button class="button button-primary" type="button" data-reservation-done>Wróć do strony</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="cart-drawer" data-cart-modal aria-labelledby="cart-title">
+      <div class="cart-shell">
+        <div class="cart-header">
+          <div><p class="eyebrow">Twoje zamówienie</p><h2 id="cart-title">Koszyk</h2></div>
+          <button class="modal-close static" type="button" data-close-cart aria-label="Zamknij">×</button>
+        </div>
+        <div class="cart-items" data-cart-items></div>
+        <p class="cart-empty" data-cart-empty>Jeszcze nic tu nie ma. Wybierz coś pysznego z menu.</p>
+        <div class="cart-summary">
+          <div><span>Razem</span><strong data-cart-total>0 zł</strong></div>
+          <button class="button button-primary full" type="button" data-checkout>Dalej: sposób odbioru</button>
+        </div>
+      </div>
+    </dialog>
+
+    <dialog class="checkout-modal" data-checkout-modal aria-labelledby="checkout-title">
+      <div class="checkout-shell">
+        <header class="checkout-header">
+          <div>
+            <p class="eyebrow">Twoje zamówienie</p>
+            <h2 id="checkout-title">Jeszcze chwila.</h2>
+          </div>
+          <button class="modal-close static" type="button" data-close-checkout aria-label="Zamknij zamówienie">×</button>
+        </header>
+
+        <div class="checkout-progress" data-checkout-progress aria-label="Postęp zamówienia">
+          <span class="active"><b>1</b>Dane i odbiór</span>
+          <i></i>
+          <span><b>2</b>Sprawdź</span>
+        </div>
+
+        <section class="checkout-step" data-checkout-details>
+          <form data-order-form>
+            <fieldset class="checkout-fieldset">
+              <legend>Jak odbierasz?</legend>
+              <div class="fulfillment-options">
+                <button class="fulfillment-card selected" type="button" data-fulfillment="delivery" aria-pressed="true">
+                  <span aria-hidden="true">→</span>
+                  <strong>Dostawa</strong>
+                  <small>35–45 min · 8 zł</small>
+                </button>
+                <button class="fulfillment-card" type="button" data-fulfillment="pickup" aria-pressed="false">
+                  <span aria-hidden="true">⌂</span>
+                  <strong>Odbiór osobisty</strong>
+                  <small>około 20 min · bez opłat</small>
+                </button>
+              </div>
+            </fieldset>
+
+            <fieldset class="checkout-fieldset">
+              <legend>Dane kontaktowe</legend>
+              <div class="checkout-fields two-columns">
+                <label><span>Imię</span><input type="text" name="customerName" autocomplete="given-name" placeholder="Twoje imię" required maxlength="40"></label>
+                <label><span>Telefon</span><div class="phone-input"><span aria-hidden="true">+48</span><input type="tel" name="customerPhone" autocomplete="tel-national" inputmode="numeric" placeholder="500 000 000" required pattern="[0-9]{3} [0-9]{3} [0-9]{3}" maxlength="11" title="Wpisz 9-cyfrowy polski numer telefonu" data-polish-phone></div></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="checkout-fieldset" data-delivery-fields>
+              <legend>Adres dostawy</legend>
+              <div class="checkout-fields address-grid">
+                <label class="wide"><span>Ulica i numer</span><input type="text" name="street" autocomplete="street-address" placeholder="np. Dobra 24" required maxlength="80"></label>
+                <label><span>Lokal</span><input type="text" name="apartment" autocomplete="address-line2" placeholder="opcjonalnie" maxlength="12"></label>
+                <label><span>Kod pocztowy</span><input type="text" name="postalCode" autocomplete="postal-code" inputmode="numeric" placeholder="32-232" required pattern="[0-9]{2}-[0-9]{3}" maxlength="6" title="Wpisz kod w formacie 00-000" data-polish-postal></label>
+                <label><span>Miasto</span><input type="text" name="city" autocomplete="address-level2" value="Warszawa" required maxlength="50"></label>
+              </div>
+            </fieldset>
+
+            <fieldset class="checkout-fieldset">
+              <legend>Płatność</legend>
+              <div class="payment-options">
+                <label><input type="radio" name="payment" value="BLIK" required checked><span>BLIK</span></label>
+                <label><input type="radio" name="payment" value="Karta online" required><span>Karta online</span></label>
+                <label><input type="radio" name="payment" value="Przy odbiorze" required><span>Przy odbiorze</span></label>
+              </div>
+            </fieldset>
+
+            <label class="checkout-note"><span>Uwagi dla kuchni lub kuriera</span><textarea name="note" rows="2" maxlength="180" placeholder="np. proszę nie dzwonić domofonem (opcjonalnie)"></textarea></label>
+
+            <button class="checkout-submit" type="submit">
+              <span>Przejdź do podsumowania</span>
+              <strong data-checkout-total></strong>
+            </button>
+            <p class="reservation-demo-note">To prototyp — dane nie są wysyłane, a płatność nie zostanie pobrana.</p>
+          </form>
+        </section>
+
+        <section class="checkout-step checkout-review" data-checkout-review hidden>
+          <div class="review-block">
+            <div class="review-heading"><h3>Twoje dania</h3><button type="button" data-edit-cart>Zmień koszyk</button></div>
+            <div data-review-items></div>
+          </div>
+          <div class="review-block">
+            <div class="review-heading"><h3>Odbiór i kontakt</h3><button type="button" data-order-edit>Edytuj</button></div>
+            <p data-review-customer></p>
+            <p data-review-fulfillment></p>
+            <p data-review-payment></p>
+          </div>
+          <div class="review-costs">
+            <p><span>Dania</span><strong data-review-subtotal></strong></p>
+            <p><span data-review-fee-label>Dostawa</span><strong data-review-fee></strong></p>
+            <p class="total"><span>Razem</span><strong data-review-total></strong></p>
+          </div>
+          <button class="checkout-submit" type="button" data-place-order><span>Złóż zamówienie</span><strong data-place-order-total></strong></button>
+          <p class="reservation-demo-note">Kliknięcie zakończy tylko demonstrację procesu.</p>
+        </section>
+
+        <section class="checkout-success" data-order-success hidden>
+          <span class="success-mark" aria-hidden="true">✓</span>
+          <p class="eyebrow">Zamówienie przyjęte</p>
+          <h2>To już się robi.</h2>
+          <p data-order-success-copy></p>
+          <div class="order-number"><span>Numer zamówienia</span><strong data-order-number></strong></div>
+          <p class="reservation-demo-success">To demonstracja — restauracja nie otrzymała zamówienia, a płatność nie została wykonana.</p>
+          <button class="button button-primary" type="button" data-order-done>Wróć do strony</button>
+        </section>
+      </div>
+    </dialog>
+
+    <div class="toast" data-toast role="status" aria-live="polite"></div>
+  </body>
+</html>
